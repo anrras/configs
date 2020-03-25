@@ -1,0 +1,105 @@
+set nocompatible        "be iMproved
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'google/vim-colorscheme-primary'
+Plugin 'mhinz/vim-startify'
+Plugin 'mattn/emmet-vim'
+Plugin 'tpope/vim-surround'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'ervandew/supertab'
+Plugin 'NLKNguyen/papercolor-theme'
+
+call vundle#end()
+"""""""""""""""""""""""""""""""
+"Enable filetype plugins 
+filetype plugin indent on
+
+"Enable syntax highlighting
+syntax enable
+
+" Set to auto read when a file is changed from the outside
+set autoread
+
+set encoding=utf-8
+set t_Co=256
+
+set magic
+set shiftwidth=4
+set tabstop=4
+set expandtab
+set smarttab
+
+set cursorline
+set wildmenu
+set nu
+set ruler
+set showcmd
+set wrap linebreak
+set ttyfast
+set title
+
+"Sin Backups
+set nobackup
+set nowritebackup
+set noswapfile
+
+"indentado
+set autoindent
+set smartindent
+
+"busqueda
+set incsearch
+set smartcase
+set ignorecase 
+
+"solo mostrar el hlsearch cuando se realiza la busqueda
+autocmd InsertEnter * :setlocal nohlsearch
+autocmd InsertLeave * :setlocal hlsearch
+
+"infinite undo
+set undofile
+set undodir=~/.vim/undodir 
+
+let mapleader = ","
+map - :
+
+"Pegar Texto Indentado
+map <Leader>p :set paste<CR>o<esc>"*]p:set nopaste<CR>
+
+"Guardar cambios en archivos cuando estan en solo lectura
+cmap w!! w !sudo tee % >/dev/null
+
+"======= NERDTreeToggle =======
+nmap <Leader>n :NERDTreeToggle<CR>
+
+"Abrir el vimrc presionando ,v
+nmap <leader>v  :tabedit $MYVIMRC<CR>
+
+"vim-airline
+"let g:airline_powerline_fonts=1
+"set laststatus=2
+
+if has("gui_running")
+    set background=light
+    colorscheme primary
+    set guioptions=ac
+    set mousehide
+else
+    colorscheme molokai
+endif
+
+
+" Source the vimrc file after saving it
+if has("autocmd")
+    autocmd bufwritepost vimrc :source $MYVIMRC
+endif
