@@ -69,9 +69,6 @@ EndSection
 `sudo systemctl enable --now fstrim.timer`
 
 ---
-####Fuentes 
-
-
 nodejs npm opera code pgadmin4 filezilla 
 
 ####KVM Qemu virt-manager
