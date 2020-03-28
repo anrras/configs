@@ -8,8 +8,20 @@ set cursorline  " Resalta la línea actual
 set hidden  " permitir cambiar de buffers sin tener que guardarlos
 set spelllang=en,es  " corregir palabras usando diccionarios en inglés y español
 set termguicolors  " Activa true colors en la terminal
+set fileencoding=utf-8
+
+set smartindent
+set expandtab         "tab to spaces
+set tabstop=2         "the width of a tab
+set shiftwidth=2      "the width for indent
+
+filetype on
+filetype plugin on
+filetype plugin indent on
 
 let mapleader=","
+map ; :
+inoremap jj <Esc>
 
 nmap <leader>r :so ~/.config/nvim/init.vim<CR>
 
