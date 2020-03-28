@@ -1,5 +1,5 @@
 ##Instalar paquetes
-`sudo pacman -S git ranger rtorrent htop sxiv neofetch openssh mpv p7zip unrar tar rsync gvfs fuse-exfat exfat-utils ufw tlp tmux ntfs-3g powerline powerline-fonts noto-fonts mesa vulkan-intel vulkan-icd-loader ocl-icd intel-compute-runtime`
+`sudo pacman -S git ranger rtorrent htop sxiv neofetch openssh mpv p7zip unrar tar rsync gvfs fuse-exfat exfat-utils ufw tlp tmux ntfs-3g powerline powerline-fonts noto-fonts otf-fira-code ttf-linux-libertine ttf-liberation ttf-roboto mesa vulkan-intel vulkan-icd-loader ocl-icd intel-compute-runtime`
 
 #####UFW
 
@@ -70,7 +70,7 @@ EndSection
 
 ---
 ####Fuentes 
-`sudo pacman -S terminus-font ttf-bitstream-vera ttf-dejavu ttf-droid ttf-freefont` 
+
 
 nodejs npm opera code pgadmin4 filezilla 
 
